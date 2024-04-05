@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{title}}{% endblock %}
+{% block linking %}<link rel="stylesheet" href="{% static 'all_countries/css/login.css' %}">{% endblock %}
+{% block content %}
+<form action="{% url 'login' %}" method="post" id="form_login">
+  {% csrf_token %}
+  <div class="errors"><b>{{form.non_field_errors}}</b></div>
+  {% for f in form %}
+  <p><label for="{{f.id_for_label}}"><b class="labels_login">{{f.label}}</b></label>{{f}}</p>
+  <div class="errors"><b>{{f.errors}}</b></div>
+  {% endfor %}
+  <button type="submit" id="sign_button"><b id="sign_text">Войти</b></button>
+</form>
+{% endblock %}

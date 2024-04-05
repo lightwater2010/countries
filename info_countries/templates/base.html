@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block linking %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <div id="header">
+        {% if request.user.is_authenticated %}
+            <span id="account_span"><b>{{user.username}}   </b><a href="{% url 'logout' %}" id="logout_a">Выйти</a></span>
+        {% else %}
+            <a href="{% url 'login' %}" class="helper">Войти</a>
+        {% endif %}
+        <h1 id="header-name"><a href="{% url 'home' %}" id="header-a">Countries</a></h1>
+        <button id="register_button"><a href="{% url 'register' %}" id="register_a">Регистрация</a></button>
+    </div>
+    <div id="footer">
+        <h1 id="connect_with_me"><b>Связаться со мной можно</b></h1>
+
+    </div>
+
+    <div id="connecting_div">
+        <a href="https://steamcommunity.com/profiles/76561199306849361/" id="my_steam" target="_blank">Мой Стим</a>
+        <a href="mailto:gubaidullun2010@gmail.com" id="email">Моя почта</a>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

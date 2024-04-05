@@ -1,0 +1,40 @@
+#register_form{
+    position:relative;
+    left:600px;
+    font-size:1.5em;
+    box-shadow:2px 2px 2px 2px black;
+    width:550px;
+    text-align:center;
+    background:#5A9D77;
+    border-radius:20px;
+    top:100px;
+}
+#register_form input{
+    border-radius:10px;
+    box-shadow:1px 1px 1px 1px black;
+    border:none;
+
+}
+#button_add{
+    border:none;
+    box-shadow:1px 1px 1px 1px black;
+    border-radius:3px;
+    background:grey;
+    height:20px;
+    width:150px;
+    transition:1s;
+}
+#registration_text{
+    color:white;
+    transition:1s;
+}
+#button_add:hover{
+    background:#EDEDED;
+}
+#registration_text:hover{
+    color:black;
+}
+.errors{
+    color:#781F1F;
+    font-size:0.8em;
+}

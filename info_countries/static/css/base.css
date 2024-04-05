@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Heebo:wght@400;500&family=Lilita+One&family=Mukta:wght@500&family=Philosopher&family=Roboto:wght@500&family=Rubik:wght@500&family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Heebo:wght@400;500&family=Lilita+One&family=Merriweather:wght@900&family=Mukta:wght@500&family=Philosopher&family=Roboto:wght@500&family=Rubik:wght@500&family=Sawarabi+Gothic&display=swap');
+html{
+    font-family: 'Almarai', sans-serif;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Lilita One', cursive;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Philosopher', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+#header-name{
+    font-size:4em;
+    text-align:center;
+    box-shadow: 2px 2px 3px 1px grey;
+
+
+
+
+
+}
+body{
+    background:url('https://99px.ru/sstorage/53/2016/10/tmb_181618_2273.png');
+    background-size:cover;
+}
+#email{
+    text-decoration:none;
+    color:black;
+    font-size: 2.2em;
+    position:relative;
+    bottom:30px;
+    left:20px;
+}
+#footer{
+  position: absolute;
+  left: 0;
+  bottom: -200px;
+  width: 100%;
+  height: 230px;
+  background:#78C79A;
+  box-shadow:2px 3px 3px 4px black;
+}
+#email:hover{
+    color:#DCFFEB;
+
+}
+#connect_with_me{
+    text-align:center;
+    background:#5A9D77;
+    box-shadow:2px 3px 2px 1px black;
+    height: 100px;
+    position:relative;
+    bottom:22px;
+}
+#my_steam{
+    text-decoration:none;
+    font-size:2.2em;
+    color:black;
+    position:relative;
+    top:20px;
+    left:152px;
+}
+#my_steam:hover{
+    color:#DCFFEB;
+}
+#search_form{
+    background:#B7D6CB;
+    height:35px;
+    width:400px;
+    position:relative;
+    left:40%;
+    box-shadow:2px 1px 1px 2px black;
+}
+.label_form{
+    font-size:1.5em;
+    position:relative;
+    left:10%;
+    font-family:Verdana, sans-serif;
+
+}
+#search_form input{
+    border-radius:20px;
+    border:none;
+    position:relative;
+    left:12%;
+    height:20px;
+
+}
+#button_search{
+    position:relative;
+    top:10px;
+}
+#header-a{
+    text-decoration:none;
+    color:black;
+}
+#connecting_div{
+  position: absolute;
+  left: 0;
+  bottom: -230px;
+  width: 100%;
+  height: 80px;
+  font-size:0.8em;
+  background:#78C79A;
+
+}
+#register_button{
+    position:relative;
+    float:right;
+    bottom:75px;
+    background:#78C79A;
+    font-size:1.5em;
+    border-radius:6px;
+    border:1px solid black;
+    transition:1.5s;
+}
+#register_a{
+    text-decoration:none;
+    color:black;
+
+}
+#register_button:hover{
+    background:#5A9D77;
+    box-shadow:2px 1px 1px 1px black;
+
+
+}
+.helper{
+    float:right;
+    text-decoration:none;
+    color:black;
+    font-size:1.5em;
+}
+.helper:hover{
+    color:#878787;
+    text-decoration:underline;
+}
+#account_span{
+    float:right;
+    font-size:1.6em;
+}
+#logout_a{
+    color:black;
+    text-decoration:none;
+}
+#logout_a:hover{
+    color:grey;
+    text-decoration:underline;
+}

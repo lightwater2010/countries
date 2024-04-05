@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{title}}{% endblock %}
+{% block linking %}<link rel="stylesheet" href="{% static 'all_countries/css/registration.css' %}">{% endblock %}
+{% block content %}
+
+<form action="{% url 'register' %}" method="post" id="register_form">
+    {% csrf_token %}
+    <h1>Регистрация</h1>
+    <div class="errors">{{form.non_field_errors}}</div>
+    {% for f in form %}
+    <p><label for="{{f.id_for_label}}" class="label_id"><b>{{f.label}}</b></label>{{f}}</p>
+    <div class="errors">{{f.errors}}</div>
+    {% endfor %}
+    <button type="submit" id="button_add"><b id="registration_text">Зарегистрироваться</b></button>
+</form>
+{% endblock %}

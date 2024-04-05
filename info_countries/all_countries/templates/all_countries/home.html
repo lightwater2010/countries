@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{title}}{% endblock %}</title>
+{% block linking %}<link rel="stylesheet" href="{% static 'all_countries/css/home.css' %}">{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'search' %}" method="get" id="search_form">
+    {% csrf_token %}
+    <label class="label_form" for="search">Country name</label>
+    <input type="search" name="search" placeholder="🔎Название страны" maxlength="150">
+
+</form>
+
+{% if c %}
+        <div id="info_div">
+            <h1 class="country_name">{{c.name|upper|default:"Такой страны нет..."}}</h1>
+            <div class="img_div">
+                <img src="{{c.flag}}" alt="flag" class="flag_img">
+            </div>
+            <h2 class="info">Все названия: {{c.all_names}}</h2>
+            <h2 class="info">Местоположение: {{c.region}}</h2>
+            <h2 class="info">Столица: {{c.capital}}</h2>
+            <h2 class="info">Валюта: {{c.currincies}}</h2>
+            <h2 class="info">Языки: {{c.language}}</h2>
+            <a href="{{c.google_maps}}" name="google_a" class="info" id="google_map"><h2>Гугл Карта</h2></a>
+        </div>
+{% else %}
+        <h1>Такой страны нет...</h1>
+{% endif %}
+{% endblock %}
